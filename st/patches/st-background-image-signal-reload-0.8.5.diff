@@ -1,0 +1,51 @@
+From 1317d64817460aee9321e29e5e31c072d59139c6 Mon Sep 17 00:00:00 2001
+From: Matthias Schoth <mschoth@gmail.com>
+Date: Sun, 17 Apr 2022 04:01:59 +0200
+Subject: [PATCH] Reload background image on USR1 signal.
+
+---
+ x.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/x.c b/x.c
+index fedef53..ac79ac7 100644
+--- a/x.c
++++ b/x.c
+@@ -156,6 +156,7 @@ static int xicdestroy(XIC, XPointer, XPointer);
+ static void xinit(int, int);
+ static void updatexy(void);
+ static XImage *loadff(const char *);
++static void bgreload();
+ static void bginit();
+ static void cresize(int, int);
+ static void xresize(int, int);
+@@ -1305,6 +1306,18 @@ loadff(const char *filename)
+ 	return xi;
+ }
+ 
++/*
++ * reload background image on USR1 signal
++ */
++void
++bgreload()
++{
++	XFreeGC(xw.dpy, xw.bggc);
++	bginit();
++	redraw();
++	signal(SIGUSR1, bgreload);
++}
++
+ /*
+  * initialize background image
+  */
+@@ -2193,6 +2206,7 @@ run:
+ 	tnew(cols, rows);
+ 	xinit(cols, rows);
+ 	bginit();
++	signal(SIGUSR1, bgreload);
+ 	xsetenv();
+ 	selinit();
+ 	run();
+-- 
+2.35.3
+

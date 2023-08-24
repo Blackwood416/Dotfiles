@@ -1,0 +1,16 @@
+[plugins.zsh-vi-mode]
+github = "jeffreytse/zsh-vi-mode"
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+[plugins.zsh-sudo]
+github = "hcgraf/zsh-sudo"
+[plugins.colored-man-pages]
+github = "ael-code/zsh-colored-man-pages"
+[plugins.z]
+github = "rupa/z"
+[plugins.extract]
+github = "thetic/extract"
