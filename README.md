@@ -1,6 +1,6 @@
 # Introduction
 
-This repository is just used to store my personal GUI configuration. If you like it, please click the Star button.
+This repository is just used to store my personal GUI(bspwm) configurations. If you like it, please click the Star button.
 
 # Usage
 
