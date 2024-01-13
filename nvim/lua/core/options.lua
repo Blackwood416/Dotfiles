@@ -7,7 +7,7 @@ local opt = vim.opt -- Set options (global/buffer/windows-scoped)
 opt.mouse = "a" -- Enable mouse support
 opt.clipboard = "unnamedplus" -- Copy/paste to system clipboard
 opt.swapfile = false -- Don't use swapfile
-opt.completeopt = "menuone,noinsert,noselect" -- Autocomplete options
+opt.completeopt = "menuone,preview" -- Autocomplete options
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -32,6 +32,7 @@ opt.laststatus = 3 -- Set global statusline
 opt.expandtab = true -- Use spaces instead of tabs
 opt.shiftwidth = 4 -- Shift 4 spaces when tab
 opt.tabstop = 4 -- 1 tab == 4 spaces
+opt.autoindent = true -- Set autoindent
 
 -----------------------------------------------------------
 -- Memory, CPU

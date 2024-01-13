@@ -50,7 +50,7 @@ require("formatter").setup({
 				}
 			end,
 		},
-		h = {
+		cpp = {
 			function()
 				return {
 					exe = "clang-format",

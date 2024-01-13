@@ -17,4 +17,4 @@ bspc config gapless_monocle      false
 bspc rule -a Screenkey manage=off
 bspc rule -a Peek state=floating follow=on
 ~/.config/polybar/launch.sh
-fcitx5 &
+pkill fcitx5 || fcitx5 &

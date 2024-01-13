@@ -19,7 +19,19 @@ copy_cfg()
 {
     if [ -d "$HOME/.config" ]; then
         echo "Start copying files to $HOME/.config"
-        cp "$(pwd)/.zshrc" "$HOME"
+        cp "$(pwd)/.zshrc" "$HOME" -rf
+        cp "$(pwd)/bspwm" "$HOME" -rf
+        cp "$(pwd)/joshuto" "$HOME" -rf
+        cp "$(pwd)/neofetch" "$HOME" -rf
+        cp "$(pwd)/nvim" "$HOME" -rf
+        cp "$(pwd)/polybar" "$HOME" -rf
+        cp "$(pwd)/rofi" "$HOME" -rf
+        cp "$(pwd)/sheldon" "$HOME" -rf
+        cp "$(pwd)/st" "$HOME/.st" -rf
+        cp "$(pwd)/starship" "$HOME" -rf
+        cp "$(pwd)/sxhkd" "$HOME" -rf
+        cd "$HOME/.st"
+        make install
     else
         echo "Find that you don't have a .config directory, creating one"
         mkdir -p "$HOME/.config"

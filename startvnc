@@ -1,0 +1,16 @@
+#! /bin/bash
+nohup pkill Xvnc >/dev/null 2>&1 &
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+export XDG_RUNTIME_DIR="/tmp/runtime-axis/"
+echo "Setting XDG_RUNTIME_DIR, current value is$XDG_RUNTIME_DIR"
+if [ -f /run/dbus/pid ]; then
+    echo "/run/dbus/pid exists, removing it"
+    sudo rm -rf /run/dbus/pid
+    echo "Starting dbus-daemon"
+    sudo dbus-daemon --system --fork
+fi
+echo "Launching Xvnc service"
+nohup dbus-launch vncserver :0 >/dev/null 2>&1 &
+nohup am start -n com.gaurav.avnc/com.gaurav.avnc.StartupActivity >/dev/null 2>&1 &
+echo "VNC service has been started"

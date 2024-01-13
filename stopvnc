@@ -1,0 +1,3 @@
+#! /bin/bash
+nohup pkill Xvnc >/dev/null 2>&1 &
+echo "VNC service has been killed"

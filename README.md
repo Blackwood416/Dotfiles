@@ -14,4 +14,5 @@ chmod +x install.sh
 ./install.sh
 ```
 
-> **IMPORTANT: You are supposed to use Arch Linux when running this script.**
+> **IMPORTANT: You are supposed to use Arch Linux when running this script. **
+> **And before you running the script, you should edit config.def.h at line 16 in st directory to ensure the absolute path is pointing to the background file.**
