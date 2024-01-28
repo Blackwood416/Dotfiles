@@ -12,5 +12,5 @@ if [ -f /run/dbus/pid ]; then
 fi
 echo "Launching Xvnc service"
 nohup dbus-launch vncserver :0 >/dev/null 2>&1 &
-nohup am start -n com.gaurav.avnc/com.gaurav.avnc.StartupActivity >/dev/null 2>&1 &
+#nohup am start -n com.gaurav.avnc/com.gaurav.avnc.StartupActivity >/dev/null 2>&1 &
 echo "VNC service has been started"
