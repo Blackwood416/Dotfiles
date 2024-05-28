@@ -2,7 +2,7 @@
 install_packages()
 {
     echo "Start installing necessary packages"
-    sudo pacman -Syu zsh starship sheldon eza xorg xfce4 xfce4-goodies noto-fonts-cjk noto-fonts-emoji noto-fonts-extra fastfetch trash-cli p7zip unrar unzip xclip fcitx5 fcitx5-mozc fcitx5-material-color fcitx5-configtool fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki fzf tigervnc pulseaudio wget --needed --noconfirm
+    sudo pacman -Syu zsh starship sheldon zoxide eza xorg noto-fonts-cjk noto-fonts-emoji noto-fonts-extra fastfetch trash-cli bat p7zip unrar unzip xclip fcitx5 fcitx5-mozc fcitx5-material-color fcitx5-configtool fcitx5-chinese-addons fcitx5-pinyin-moegirl fcitx5-pinyin-zhwiki fzf tigervnc pulseaudio wget feh xorg-appres --needed --noconfirm
 }
 check_environment()
 {

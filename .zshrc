@@ -1,4 +1,5 @@
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export HISTSIZE=50000
 export HISTFILE=~/.zsh_history
@@ -14,15 +15,13 @@ compinit -u
 eval "$(sheldon source)"
 alias md=mkdir
 alias rd=rmdir
-alias ls="exa --color=auto"
-alias l="exa -lbah --icons"
-alias la="exa -labgh --icons"
-alias ll="exa -lbg --icons"
-alias lsa="exa -lbagR --icons"
-alias lst="exa -lTabgh --icons"
-alias nv=nvim
-alias j=joshuto
+alias ls="eza --color=auto"
+alias l="eza -lbah --icons"
+alias la="eza -labgh --icons"
+alias ll="eza -lbg --icons"
+alias lsa="eza -lbagR --icons"
+alias lst="eza -lTabgh --icons"
 alias rm=trash
-alias work="cd ~/WorkSpace"
-alias quit="touch /tmp/noexitapp&&exit 1"
+alias j=joshuto
+alias v=nvim
 source /etc/environment

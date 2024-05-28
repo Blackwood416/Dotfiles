@@ -10,7 +10,5 @@ github = "zsh-users/zsh-autosuggestions"
 github = "hcgraf/zsh-sudo"
 [plugins.colored-man-pages]
 github = "ael-code/zsh-colored-man-pages"
-[plugins.z]
-github = "rupa/z"
 [plugins.extract]
 github = "thetic/extract"
